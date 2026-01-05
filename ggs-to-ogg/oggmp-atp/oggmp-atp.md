@@ -131,57 +131,53 @@ unzip Wallet_ALK.zip -d wallet_ALK</copy>
 
 > **Note:** Leave Cloud Shell open.
 
-## Task 3: Add the Target Autonomous AI Lakehouse Credential in the Oracle GoldenGate Administration Server
+## Task 3: Add the Target Autonomous AI Lakehouse Credential in the Oracle GoldenGate Administration Service
 
-1. On the deployment details page, click **Launch Console**.
+1. In Cloud Shell, enter `cat ogg-credentials.json`. The prompt returns Username and credential values. Copy the credential value.
+
+2. On the deployment details page, click **Launch Console**.
 
     ![Launch Console](https://oracle-livelabs.github.io/goldengate/ggs-common/create/images/07-01-launchconsole.png " ") 
 
-2. To log in to the GoldenGate deployment console, enter **oggadmin** for User name, enter the password, and then click **Sign In**. 
+3. To log in to the GoldenGate deployment console, enter **oggadmin** for User name, past the credential copied from step 1 for password, and then click **Sign In**. 
 
     ![GoldenGate deployment console sign in](https://oracle-livelabs.github.io/goldengate/ggs-common/extract/images/02-02-oggadmin-23ai.png " ")
 
-    > **NOTE:** If using the LiveLab Sandbox environment, copy the OCI GoldenGate Admin Password from the Terraform output section of **View Login Info**.
-
-    ![View Login info](https://oracle-livelabs.github.io/goldengate/ggs-common/extract/images/02-02a-view-login-info.png " ")
-
-    ![Terraform values](https://oracle-livelabs.github.io/goldengate/ggs-common/extract/images/02-02b-terraform-values.png " ")
-
 After you log in successfully, you're brought to the GoldenGate deployment console home page. Here, you can access the GoldenGate Administration, Performance Metrics, Distribution, and Receiver Services, as well as add Extracts and Replicats for your data replication tasks.
 
-3.  In the OCI GoldenGate deployment console navigation menu select **DB Connections**.
+4.  In the OCI GoldenGate deployment console navigation menu select **DB Connections**.
 
     ![Click Configuration in the OCI GoldenGate deployment console navigation menu](./images/04-02-configuration.png " ")
 
-4.  Copy the TargetALK connection string in the User ID column, and then paste it into a text editor.
+5.  Copy the TargetALK connection string in the User ID column, and then paste it into a text editor.
 
     ![Copy the target database's connection string and paste it into a text editor](./images/04-03-configuration-targetadw.png " ")
 
-5.  Edit the TargetALK connection string, replacing the value for **MY\_WALLET\_DIRECTORY** with the location where you unzipped the wallet_ALK.zip. For example, **/home/opc/wallet\_ALK**.
+6.  Edit the TargetALK connection string, replacing the value for **MY\_WALLET\_DIRECTORY** with the location where you unzipped the wallet_ALK.zip. For example, **/home/opc/wallet\_ALK**.
 
     ![Replace the existing value for MY_WALLET_DIRECTORY with the path to the wallet files](./images/04-04-wallet-zip.png " ")
 
-6.  In a new browser tab or window, use the compute instance's Public IP and port 443 (**https://&lt;public-ip&gt;:443**) to open the Service Manager.
+7.  In a new browser tab or window, use the compute instance's Public IP and port 443 (**https://&lt;public-ip&gt;:443**) to open the Service Manager.
 
-7.  Log in to the Service Manager using the **oggadmin** credentials found in **/home/opc/ogg-credentials.json**.
+8.  Log in to the Service Manager using the **oggadmin** credentials found in **/home/opc/ogg-credentials.json**.
 
-8. In the Service Manager console, under Deployment, click **Marketplace**.
+9. In the Service Manager console, under Deployment, click **Marketplace**.
 
     ![Service Manager console](https://oracle-livelabs.github.io/goldengate/ggs-common/oggmp-atp/images/04-06-service-mngr.png " ")
 
-9. Under Marketplace, click **Administration Server**. The Administration Server opens in a new browser tab. If you're prompted to log in again, use the same oggadmin credentials.
+10. Under Marketplace, click **Administration Server**. The Administration Server opens in a new browser tab. If you're prompted to log in again, use the same oggadmin credentials.
 
     ![Marketplace page on the Service Manager](https://oracle-livelabs.github.io/goldengate/ggs-common/oggmp-atp/images/04-07-marketplace.png " ")
 
-10.  In the Administration Server, open the navigation menu (hamburger icon), and then select **DB Connections**.
+11.  In the Administration Server, open the navigation menu (hamburger icon), and then select **DB Connections**.
 
     ![Click DB Connections in the Administration Server's navigation menu](https://oracle-livelabs.github.io/goldengate/ggs-common/oggmp-atp/images/03-06.png " ")
 
-11.  Click **Add DB Connection**.
+12.  Click **Add DB Connection**.
 
     ![Click Add Path Connection](https://oracle-livelabs.github.io/goldengate/ggs-common/oggmp-atp/images/03-09.png " ")
 
-12. Enter the following information, and then click **Submit**:
+13. Enter the following information, and then click **Submit**:
 
     * For **Credential Domain**, enter **OracleGoldenGate**.
     * For **Credential Alias**, enter **TargetALK**.
@@ -190,7 +186,7 @@ After you log in successfully, you're brought to the GoldenGate deployment conso
 
     ![Add a credential for atp_low](./images/04-11-submit-credential.png " ")
 
-13. To test the connection, click **Connect to database**. Your connection credentials are correct if you see Checkpoint and TRANDATA options appear. If incorrect, you should check the connection string and ggadmin password.
+14. To test the connection, click **Connect to database**. Your connection credentials are correct if you see Checkpoint and TRANDATA options appear. If incorrect, you should check the connection string and ggadmin password.
 
 In this lab, you created a connection from the Oracle GoldenGate Marketplace instance to the target Autonomous AI Lakehouse database. You may now **proceed to the next lab**.
 
