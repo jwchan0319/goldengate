@@ -47,11 +47,11 @@ In order to complete this lab, you should have completed the preceding labs.
 
 11. After the session is Active, select Copy SSH command from the **Action** menu.
 
-12. Click on the Developer Tools menu on the navigation bar, and select **Cloud Shell**.
+12. Paste the command into a text editor. Ensure that you replace `<privateKey>` with the full path to the key, and `<localPost>` with the local port of the machine from which you plan to connect. You can use any available port number.
 
-    ![Open cloud shell](./images/01-12-cloud-shell.png " ")
+    > **NOTE:** On Mac or Linux, open a terminal window and run the command. On Windows, use PowerShell. If prompted to continue connecting, type `yes`, and then press **Enter**.
 
-13. After the cloud shell session is active, paste the SSH command from your bastion session. Ensure that you replace the `<privateKey` and `<localPort>` values.
+13. To use Cloud Shell, open the Developer Tools menu in the navigation bar, and then select **Cloud Shell**. Select the VCN and Subnet your OCI MySQL DB system uses, and then click **Use as active network**. 
 
     >**NOTE:** If you generated a new SSH key pair in step 10, you must first upload your private key to Cloud Shell using the Cloud Shell Settings menu, and change the permission on the key (`chmod 600 <privateKey>`).
 
@@ -84,7 +84,7 @@ commit;</copy>
 
     ![Extract Process Information - Statistics](./images/01-16-ext-stats.png " ")
 
-17.  In the PostgreSQL deployment, go back to the Overview screen, click the **Replicat name (RCDC)**, and then click **Statistics**. Verify that **SRC\_OCIGGLL.SRC\_CITY** is listed with 10 inserts.
+17.  In the PostgreSQL deployment, go back to the Overview screen, click the **Replicat name (RCDC)**, and then click **Statistics**. 
 
     ![Replicat Process Information - Statistics](./images/01-17-ext-stats.png " ")
 
@@ -113,7 +113,7 @@ commit;</copy>
 
     Here, you can view the real time database statistics, such as Inserts, Updates, Deletes, and so on.
 
-4.  Repeat steps 1-3 in ADWDeployment to view a snapshot of the Replicat's (named **Rep** in our lab) Database Statistics.
+4.  Repeat steps 1-3 in PostgreSQL deployment to view a snapshot of the Replicat's (named **Rep** in our lab) Database Statistics.
 
 ## Task 3: Create a Purge task
 
@@ -140,4 +140,4 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 - **Author** - Katherine Wardhana, User Assistance Developer
 - **Contributors** -  Shrinidhi Kulkarni, GoldenGate Product Manager
-- **Last Updated by** - Katherine Wardhana, June 2025
+- **Last Updated by** - Jenny Chan, January 2026

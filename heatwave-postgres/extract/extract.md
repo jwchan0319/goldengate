@@ -133,7 +133,7 @@ To successfully complete this lab, you need:
 ## Task 3: Create an OCI GoldenGate user for the Distribution Paths
 In this task, you create a user in the target deployment for the Distribution Paths to use to send data.
 
-1.  In the Oracle Cloud console, on the **Deployments** page, select the target Autonomous Data Warehouse deployment to view its details.
+1.  In the Oracle Cloud console, on the **Deployments** page, select the target PostgreSQL deployment to view its details.
 
 2.  On the deployment details page, click **Launch console**.
 
@@ -159,12 +159,11 @@ In this task, you create a user in the target deployment for the Distribution Pa
 
     The `ggsnet` user appears in the Users list.
 
-7.  In the source MySQL OCI GoldenGate deployment console, open the navigation menu and then click **DB Connections**.
+7.  In the source MySQL OCI GoldenGate deployment console, open the navigation menu and then click **Path Connections**.
 
 8.  On the DB Connections page, click **Add Credential** (plus icon).
 
 9.  Complete the fields as follows, and then click **Submit**:
-    * For **Credential Domain**, enter `GGSNetwork`.
     * For **Credential Alias**, enter `dpuser`.
     * For **User ID**, enter `ggsnet`.
     * For **Password**, enter the password from Step 6.
@@ -194,7 +193,7 @@ In this task, you create a user in the target deployment for the Distribution Pa
 
 5. On the Target Options page, complete the following fields, and then click **Next**:
 
-    * For **Target Host**, enter the target ADW OCI GoldenGate deployment console URL, without the https:// or any trailing slashes. You can copy the console URL from the ADWDeployment details page.
+    * For **Target Host**, enter the target PostgreSQL deployment console URL, without the https:// or any trailing slashes. You can copy the console URL from the PostgreSQL deployment details page.
 
     ![Copy console URL from target deployment details page](./images/04-05a-console-url.png " ")
 
@@ -218,7 +217,7 @@ In this task, you create a user in the target deployment for the Distribution Pa
 
     You return to the Distribution Service Overview page where you can review the path created.
 
-9.  In the target ADW OCI GoldenGate deployment console (**adw_instance**), click **Receiver Service** to review the Receiver Path created as a result of creating the `ILDP` Distribution Path.
+9.  In the target PostgreSQL deployment console (**OCIPG\_instance**), click **Receiver Service** to review the Receiver Path created as a result of creating the `ILDP` Distribution Path.
 
 10. Repeat this task to create a Distribution Path for the Initial Load Extract.
 
@@ -231,4 +230,4 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 - **Author** - Katherine Wardhana, User Assistance Developer
 - **Contributors** -  Shrinidhi Kulkarni, GoldenGate Product Manager
-- **Last Updated by** - Katherine Wardhana, June 2025
+- **Last Updated by** - Jenny Chan, January 2026

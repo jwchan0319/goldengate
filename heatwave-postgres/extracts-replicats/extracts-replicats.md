@@ -26,9 +26,9 @@ In this lab, you will:
 
 1.  In the target PostgreSQL OCI GoldenGate deployment console (**OCIPG_instance**), click **Administration Server**.
 
-2.  Open the navigation menu, and then click **DB Connections**.
+2.  In the navigation menu, click **DB Connections**.
 
-3.  For the TargetADW database, click **Connect to database TargetPG**.
+3.  For the PostgreSQL database, click **Connect to database TargetPG**.
 
     ![Connect to TargetPG](./images/01-03-dbconnect.png " ")
 
@@ -57,9 +57,9 @@ In this lab, you will:
 
 3. On the Replicat Options page, complete the following fields, and then click **Next**:
 
-    * For Replicat Trail **Name**, enter the name of the trail from the previous lab (`I1`). 
-    * For **Domain**, select the domain for the OCI Postgre SQL connection.
-    * For **Alias**, select the alias for the OCI Postgre SQL connection.
+    * For Replicat Trail **Name**, enter the name of the trail from the previous lab (`C1`). 
+    * For **Domain**, select the domain for the OCI PostgreSQL connection.
+    * For **Alias**, select the alias for the OCI PostgreSQL connection.
     * For **Checkpoint Table**, select the checkpoint table created in Task 1.
 
     ![Replicat options](./images/02-03-replicat-options.png " ")
@@ -80,13 +80,7 @@ In this lab, you will:
 
 6.  Select the RIL Replicat and view its details.
 
-7.  Click **Statistics**. Review the number of inserts, then refresh the page.
-    * If the number of Inserts doesn't change, then all the records from the Initial Load have been loaded and you can stop the Replicat (RIL).
-    * If the number of Inserts continues to increase, then keep refreshing the page until the Initial Load records are all loaded before continuing.
-
-      ![Replicat statistics](./images/02-07-rep-stats.png " ")
-
-Click **Administration Service** to return to the Overview page.
+7.  Click **Administration Service** to return to the Overview page.
 
 ## Task 3: Create a Replicat for Change Data Capture
 

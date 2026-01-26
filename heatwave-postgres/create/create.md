@@ -14,7 +14,7 @@ Connections capture source and target credential information. A connection also 
 
 ### Objectives
 
-In this lab, you will:
+In this lab, you:
 * Locate Oracle Cloud Infrastructure GoldenGate in the Console
 * Create an OCI GoldenGate deployment for HeatWave MySQL
 * Create an OCI GoldenGate deployment for OCI PostgreSQL

@@ -16,13 +16,13 @@ Estimated time: 30 minutes
 
 ### Prerequisites
 
-* Have completed the Get Started lab and sign up for Free Tier/Log in to Oracle Cloud.
+To successfully complete this workshop, you must have:
+
+* Completed the Get Started lab and have a Free Tier/Log in to Oracle Cloud.
 * For IAM-enabled tenancies, ensure that you [configure Identity domains for OCI GoldenGate](https://docs.oracle.com/en/cloud/paas/goldengate-service/mkmbs/#GUID-DD9C1BF8-69FE-4C9A-A2D1-74C73550ED65).
 * For non-IAM enabled tenancies, ensure that you ensure that you first [set up your Vault](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Tasks/managingvaults_topic-To_create_a_new_vault.htm#createnewvault). [Learn more about Vault service](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keyoverview.htm).
 
 > **Note:** You may see differences in account details (eg: Compartment Name is different in different places) as you work through the labs. This is because the workshop was developed using different accounts over time.
-
-In this section, you will provision a VCN and subnet, MySQL and OCI PostgreSQL instances, and load data to use with OCI GoldenGate.
 
 ## Task 1: Create a VCN and subnet
 
@@ -207,7 +207,7 @@ If you're working within the same Home region for OCI GoldenGate and MySQL Heatw
 
 1. Download and run the sample data script.
 
-	 [seedSRCOCIGGL_MySQL.sql](https://objectstorage.us-phoenix-1.oraclecloud.com/n/axvzt5deuijx/b/LiveLab_Bidirectional_MySQL_PostgreSQL/o/seedSRCMIRROROCIGGL_PostgreSQL.sql)
+	 [seedSRCOCIGGL_MySQL.sql](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/data-management-library-files/seedSRCOCIGGL_MySQL.sql)
 
 2. Copy and paste the sample data script from `seedSRCOCIGGL_MySQL.sql` into Cloud Shell.
 
@@ -270,7 +270,7 @@ If you're working within the same Home region for OCI GoldenGate and MySQL Heatw
 		* max\_wal\_size = 102400
 	* For **PostgreSQL extensions**, select **vector**.
 
-	> **Note:**
+	> **Notes:**
 	* To enable logical replication from PostgreSQL for the next lab, which is necessary for capturing changes from PostgreSQL, the wal\_level parameter in your PostgreSQL instance must be set to logical.
 	* (Optional) For use of vectors, under PostgreSQL extensions, select **vector**.
 	
@@ -302,7 +302,7 @@ If you're working within the same Home region for OCI GoldenGate and MySQL Heatw
 
 20. Download and run the sample data script.
 
-	 [OCIPostgreSQL\_DDLOCIPostgreSQL\_DDL](https://objectstorage.us-phoenix-1.oraclecloud.com/n/axvzt5deuijx/b/OCIADWwallet/o/OCIPostgreSQL_DDLOCIPostgreSQL_DDL.rtf)
+	 [OCIPostgreSQL\_DDLOCIPostgreSQL\_DDL](https://objectstorage.us-phoenix-1.oraclecloud.com/n/axvzt5deuijx/b/LiveLab_Bidirectional_MySQL_PostgreSQL/o/seedSRCMIRROROCIGGL_PostgreSQL.sql)
 
 21. Run the following command using the PostgreSQL admin client:
 
@@ -326,5 +326,5 @@ You may now **proceed to the next lab.**
 
 - **Author** - Katherine Wardhana, User Assistance Developer
 - **Contributors** -  Shrinidhi Kulkarni, GoldenGate Product Manager
-- **Last Updated by** - Katherine Wardhana, August 2025
+- **Last Updated by** - Jenny Chan, January 2026
 - **PAR Expiration date** - February 2030
